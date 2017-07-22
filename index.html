@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/etalage.css">
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      list-style: none;
+
+    }
+  </style>
+</head>
+<body>
+
+<ul id="exm">
+  <li>
+    <img src="images/timg.jpg" class="etalage_thumb_image" alt="">
+    <img src="images/timg.jpg" class="etalage_source_image" alt="">
+  </li>
+  <li>
+    <img src="images/timg01.jpg" class="etalage_thumb_image" alt="">
+    <img src="images/timg01.jpg" class="etalage_source_image" alt="">
+  </li>
+  <li>
+    <img src="images/timg02.jpg" class="etalage_thumb_image" alt="">
+    <img src="images/timg02.jpg" class="etalage_source_image" alt="">
+  </li>
+  <li>
+    <img src="images/timg03.jpg" class="etalage_thumb_image" alt="">
+    <img src="images/timg03.jpg" class="etalage_source_image" alt="">
+  </li>
+  <li>
+    <img src="images/timg04.jpg" class="etalage_thumb_image" alt="">
+    <img src="images/timg04.jpg" class="etalage_source_image" alt="">
+  </li>
+</ul>
+<script src='js/jquery-1.11.1.min.js'></script>
+<script src='js/jquery.etalage.min.js'></script>
+<script>
+  window.onload = function () {
+
+    $("#exm").etalage({
+      thumb_image_width: 300,//缩略图的宽度
+      thumb_image_height: 300,//缩略图的高度
+      source_image_width: 1200,//大图的宽度
+      source_image_height: 1200,//大图的高度
+      zoom_area_width: 500,//放大镜的大小
+      zoom_area_height: 500,
+      zoom_area_distance: 10,//大图显示的位置
+      small_thumbs: 3,//略缩图的个数
+      smallthumb_inactive_opacity: 0.3,//没有放大镜部分的透明度
+      smallthumbs_position: 'bottom',//略缩图的位置，本例是在左边从上到下排列，默认是在底部从左到右排列
+      show_icon: true,
+      autoplay: false,//是否自动轮播，默认是true，也就是默认是自动
+      keyboard: true,
+      zoom_easing: true,//淡入淡出效果
+      etalage_icon_width:300,
+      etalage_icon_height:300,
+    })
+
+  }
+</script>
+</body>
+</html>
